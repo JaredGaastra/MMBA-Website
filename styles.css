@@ -1039,3 +1039,223 @@ section h3 {
   }
   
 }
+/* Add these mobile-specific fixes to the bottom of your styles.css */
+
+/* === ENHANCED MOBILE RESPONSIVE === */
+
+@media (max-width: 900px) {
+  /* Navigation improvements */
+  .nav-spacer {
+    flex: 0;
+    min-width: 0;
+  }
+  
+  .menu-toggle {
+    display: flex;
+  }
+  
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    max-width: 400px;
+    height: 100vh;
+    background: white;
+    flex-direction: column;
+    padding: 6rem 2rem 2rem;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s;
+    z-index: 1000;
+    overflow-y: auto;
+  }
+  
+  .nav-menu.active {
+    left: 0;
+  }
+  
+  /* Hero section mobile */
+  .hero {
+    flex-direction: column-reverse;
+    min-height: auto;
+    padding-top: calc(var(--logo-h) + var(--nav-pad-y) * 2);
+  }
+  
+  .hero-content {
+    padding: 3rem var(--container-padding);
+    max-width: 100%;
+  }
+  
+  .hero-image {
+    height: 50vh;
+    width: 100%;
+  }
+  
+  /* Why section mobile */
+  .why-section .container {
+    grid-template-columns: 1fr;
+  }
+  
+  .why-copy {
+    display: block;
+  }
+  
+  .why-section h2 {
+    grid-column: auto;
+  }
+  
+  .why-section h3,
+  .why-section p {
+    text-align: center;
+  }
+  
+  .yt-wrap {
+    grid-column: auto;
+    margin-top: 2rem;
+  }
+  
+  /* Leaderboard mobile */
+  .lb-top {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Base adjustments */
+  :root {
+    --section-padding: clamp(3rem, 6vw, 5rem);
+  }
+  
+  /* Form mobile stacking */
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .booking-form {
+    padding: 2rem 1.5rem;
+  }
+  
+  /* Tours grid mobile */
+  .tours-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Services grid mobile */
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Reviews grid mobile */
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* FAQ grid mobile */
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Hero buttons mobile */
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .cta-button {
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Footer mobile */
+  .footer-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .footer-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Extra small screens */
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  section h2 {
+    font-size: 1.75rem;
+  }
+  
+  section h3 {
+    font-size: 1.25rem;
+  }
+  
+  .booking-form {
+    padding: 1.5rem 1rem;
+  }
+  
+  .submit-btn {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+  
+  /* Leaderboard table mobile */
+  .lb-table {
+    font-size: 0.9rem;
+  }
+  
+  .lb-table thead th,
+  .lb-table tbody td {
+    padding: 0.75rem 0.5rem;
+  }
+  
+  /* Scroll to top button mobile */
+  .scroll-top-btn {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    font-size: 1rem;
+  }
+}
+
+/* Fix form inputs on iOS */
+@supports (-webkit-touch-callout: none) {
+  input, select, textarea {
+    font-size: 16px !important; /* Prevents zoom on iOS */
+  }
+}
+
+/* Ensure no horizontal scroll */
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+}
+
+/* Fix table overflow on mobile */
+.lb-table-wrap {
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 600px) {
+  .lb-table thead th:first-child,
+  .lb-table tbody td:first-child {
+    position: sticky;
+    left: 0;
+    background: var(--color-bg);
+    z-index: 1;
+  }
+}
