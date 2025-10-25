@@ -8,6 +8,35 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TouristAttraction",
+  "name": "Maui Mountain Bike Adventures",
+  "description": "GPS-guided mountain bike tours across Maui's best terrain",
+  "url": "https://mauimountainbikeadventures.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Lahaina",
+    "addressRegion": "HI",
+    "postalCode": "96761",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "20.8783",
+    "longitude": "-156.6825"
+  },
+  "telephone": "+1-808-280-3354",
+  "email": "jared@mauimountainbikeadventures.com",
+  "priceRange": "$$",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "3"
+  }
+}
+</script>
 </head>
 <body>
     <!-- Header -->
@@ -39,19 +68,24 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero topo-hero">
+   <section class="hero">
+        <div class="hero-video-container">
+            <video class="hero-video" autoplay muted loop playsinline>
+                <source src="images/HeaderVideo.webm" type="video/webm">
+                <source src="images/HeaderVideo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="hero-video-overlay"></div>
+        </div>
         <div class="hero-content">
             <div class="hero-badge">Maui MTB Outfitter</div>
-            <h1 class="hero-title">GPS-GUIDED<br>RIDES</h1>
-            <p class="hero-subtitle">We plan, equip, and shuttle. You ride. GPS-guided, self-paced mountain bike days across Maui—bikes, gear, routes and support handled.</p>
+            <h1 class="hero-title">MOUNTAIN BIKE TOURS</h1>
+            <p class="hero-subtitle">We plan, equip, and shuttle. You ride. We also do GPS-guided, self-paced mountain bike trips across Maui—bikes, gear, routes and support handled.</p>
             <div class="hero-buttons">
                 <a href="#services" class="cta-button primary">Our Services</a>
                 <a href="#contact" class="cta-button secondary">Get Started</a>
             </div>
             <div class="scroll-indicator">Scroll to explore</div>
-        </div>
-        <div class="hero-image">
-            <img src="https://images.unsplash.com/photo-1544966503-7cc0acf9f6c2?auto=format&fit=crop&w=2070&q=80" alt="Mountain biker on Maui trail">
         </div>
     </section>
 
@@ -60,7 +94,7 @@
         <div class="container">
             <h2>We are your Maui mountain bike outfitter</h2>
             <div class="mission-content">
-                <h3>Complete outfitting for self-guided adventures</h3>
+                <h3>Complete outfitting for self-guided & guided adventures</h3>
                 <p>From route planning to gear rental, we handle everything so you can focus on the ride. GPS-guided, self-paced mountain bike experiences across Maui's best terrain.</p>
             </div>
             
@@ -136,7 +170,7 @@
                             <span>• Shuttle assist</span>
                             <span>• 2,000 ft descent</span>
                             <span>• Photo stops</span>
-                            <span>• Snacks & water</span>
+                            <span>5hr | $300 a rider</span>
                         </div>
                         <div class="tour-price">Let's Go Riding</div>
                         <a href="#contact" class="book-btn">Book Now</a>
@@ -155,6 +189,7 @@
                             <span>• E-MTB optional</span>
                             <span>• Private access</span>
                             <span>• Family friendly</span>
+                            <span>4hr | $250 a rider</span>
                         </div>
                         <div class="tour-price">Let's Go Riding</div>
                         <a href="#contact" class="book-btn">Book Now</a>
@@ -173,6 +208,7 @@
                             <span>• Steeper climbs</span>
                             <span>• Line choice tips</span>
                             <span>• Technical sections</span>
+                            <span>3hr | $200 a rider</span>
                         </div>
                         <div class="tour-price">Let's Go Riding</div>
                         <a href="#contact" class="book-btn">Book Now</a>
