@@ -163,7 +163,7 @@
 
                 <div class="tour-card">
                     <div class="tour-image">
-                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80" alt="Pine Trails Enduro">
+                        <img src="images/Kapalua.png" alt="Pine Trails Enduro">
                     </div>
                     <div class="tour-info">
                         <h4>Pine Trails Enduro</h4>
@@ -280,124 +280,129 @@
     </section>
 
     <!-- Booking Form Section -->
-    <section class="booking-form-section" id="contact">
-        <div class="container">
-            <h2>Let's Start an Adventure</h2>
-            <p class="form-subtitle">Tell us about your group and we'll handle the rest</p>
+    <!-- Booking Form Section -->
+<section class="booking-form-section" id="contact">
+    <div class="container">
+        <h2>Let's Start an Adventure</h2>
+        <p class="form-subtitle">Tell us about your group and we'll handle the rest</p>
+        
+        <form class="booking-form" action="https://formspree.io/f/mdkpnaer" method="POST">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="group-size">Group Size *</label>
+                    <select id="group-size" name="group-size" required>
+                        <option value="">Select group size</option>
+                        <option value="1">1 rider</option>
+                        <option value="2">2 riders</option>
+                        <option value="3">3 riders</option>
+                        <option value="4">4 riders</option>
+                        <option value="5">5 riders</option>
+                        <option value="6+">6+ riders</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="experience-level">Experience Level *</label>
+                    <select id="experience-level" name="experience-level" required>
+                        <option value="">Select experience level</option>
+                        <option value="beginner">Beginner - New to mountain biking</option>
+                        <option value="intermediate">Intermediate - Some trail experience</option>
+                        <option value="advanced">Advanced - Experienced rider</option>
+                        <option value="mixed">Mixed - Various skill levels</option>
+                    </select>
+                </div>
+            </div>
             
-            <form class="booking-form">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="group-size">Group Size *</label>
-                        <select id="group-size" name="group-size" required>
-                            <option value="">Select group size</option>
-                            <option value="1">1 rider</option>
-                            <option value="2">2 riders</option>
-                            <option value="3">3 riders</option>
-                            <option value="4">4 riders</option>
-                            <option value="5">5 riders</option>
-                            <option value="6+">6+ riders</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="experience-level">Experience Level *</label>
-                        <select id="experience-level" name="experience-level" required>
-                            <option value="">Select experience level</option>
-                            <option value="beginner">Beginner - New to mountain biking</option>
-                            <option value="intermediate">Intermediate - Some trail experience</option>
-                            <option value="advanced">Advanced - Experienced rider</option>
-                            <option value="mixed">Mixed - Various skill levels</option>
-                        </select>
-                    </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="preferred-date">Preferred Date</label>
+                    <input type="date" id="preferred-date" name="preferred-date">
                 </div>
                 
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="preferred-date">Preferred Date</label>
-                        <input type="date" id="preferred-date" name="preferred-date">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="route-preference">Route Preference</label>
-                        <select id="route-preference" name="route-preference">
-                            <option value="">Select preferred route</option>
-                            <option value="haleakala">Haleakalā Ridge Line</option>
-                            <option value="upcountry">Upcountry Flow</option>
-                            <option value="pine-trails">Pine Trails Enduro</option>
-                            <option value="custom">Custom route (let's discuss)</option>
-                        </select>
-                    </div>
+                <div class="form-group">
+                    <label for="route-preference">Route Preference</label>
+                    <select id="route-preference" name="route-preference">
+                        <option value="">Select preferred route</option>
+                        <option value="haleakala">Haleakalā Ridge Line</option>
+                        <option value="upcountry">Upcountry Flow</option>
+                        <option value="pine-trails">Pine Trails Enduro</option>
+                        <option value="custom">Custom route (let's discuss)</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="bike-type">Bike Preference</label>
+                    <select id="bike-type" name="bike-type">
+                        <option value="">Select bike type</option>
+                        <option value="mtb">Mountain Bike (analog)</option>
+                        <option value="e-mtb">E-MTB (electric assist)</option>
+                        <option value="mixed">Mixed - Some of each</option>
+                        <option value="bring-own">Bringing our own bikes</option>
+                    </select>
                 </div>
                 
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="bike-type">Bike Preference</label>
-                        <select id="bike-type" name="bike-type">
-                            <option value="">Select bike type</option>
-                            <option value="mtb">Mountain Bike (analog)</option>
-                            <option value="e-mtb">E-MTB (electric assist)</option>
-                            <option value="mixed">Mixed - Some of each</option>
-                            <option value="bring-own">Bringing our own bikes</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="group-type">Group Type</label>
-                        <select id="group-type" name="group-type">
-                            <option value="">Select group type</option>
-                            <option value="friends">Friends/Family</option>
-                            <option value="couple">Couple</option>
-                            <option value="solo">Solo rider</option>
-                            <option value="corporate">Corporate group</option>
-                        </select>
-                    </div>
+                <div class="form-group">
+                    <label for="group-type">Group Type</label>
+                    <select id="group-type" name="group-type">
+                        <option value="">Select group type</option>
+                        <option value="friends">Friends/Family</option>
+                        <option value="couple">Couple</option>
+                        <option value="solo">Solo rider</option>
+                        <option value="corporate">Corporate group</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="contact-name">Contact Name *</label>
+                    <input type="text" id="contact-name" name="contact-name" required>
                 </div>
                 
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="contact-name">Contact Name *</label>
-                        <input type="text" id="contact-name" name="contact-name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="_replyto" required>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
                 </div>
                 
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="accommodation">Accommodation Area</label>
-                        <select id="accommodation" name="accommodation">
-                            <option value="">Select area</option>
-                            <option value="lahaina">Lahaina</option>
-                            <option value="kaanapali">Ka'anapali</option>
-                            <option value="wailea">Wailea</option>
-                            <option value="paia">Paia</option>
-                            <option value="makawao">Makawao</option>
-                            <option value="other">Other area</option>
-                        </select>
-                    </div>
+                <div class="form-group">
+                    <label for="accommodation">Accommodation Area</label>
+                    <select id="accommodation" name="accommodation">
+                        <option value="">Select area</option>
+                        <option value="lahaina">Lahaina</option>
+                        <option value="kaanapali">Ka'anapali</option>
+                        <option value="wailea">Wailea</option>
+                        <option value="paia">Paia</option>
+                        <option value="makawao">Makawao</option>
+                        <option value="other">Other area</option>
+                    </select>
                 </div>
-                
-                <div class="form-group full-width">
-                    <label for="special-requests">Special Requests or Notes</label>
-                    <textarea id="special-requests" name="special-requests" rows="4" placeholder="Any dietary restrictions, accessibility needs, or other special requirements?"></textarea>
-                </div>
-                
-                <div class="form-submit">
-                    <button type="submit" class="submit-btn">Start My Adventure</button>
-                    <p class="form-note">We'll respond within 24 hours with route recommendations and pricing</p>
-                </div>
-            </form>
-        </div>
-    </section>
+            </div>
+            
+            <div class="form-group full-width">
+                <label for="special-requests">Special Requests or Notes</label>
+                <textarea id="special-requests" name="special-requests" rows="4" placeholder="Any dietary restrictions, accessibility needs, or other special requirements?"></textarea>
+            </div>
+            
+            <!-- Hidden fields for Formspree -->
+            <input type="hidden" name="_subject" value="New Adventure Booking - MMBA Website">
+            <input type="hidden" name="_next" value="https://mauimountainbikeadventures.com/#contact">
+            
+            <div class="form-submit">
+                <button type="submit" class="submit-btn">Start My Adventure</button>
+                <p class="form-note">We'll respond within 24 hours with route recommendations and pricing</p>
+            </div>
+        </form>
+    </div>
+</section>
 
     <!-- Leaderboard Section -->
     <section class="leaderboard-section" id="leaderboard">
@@ -445,8 +450,8 @@
                     <p>© 2025 Virtual Tours Ltd - Registered in Hawaii</p>
                     <p>Lahaina, Maui, Hawaii 96761</p>
                     <div class="contact-info">
-                        <p>T: 808-280-3354</p>
-                        <p>E: info@virtualtours.com</p>
+                        <p>T: +1(808)-280-3354</p>
+                        <p>E: jared@mauimountainbikeadventures.com</p>
                     </div>
                 </div>
                 <div class="footer-links">

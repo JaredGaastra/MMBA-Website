@@ -208,20 +208,20 @@ function initLeaderboard() {
       id: 'haleakala-ridge',
       name: 'Haleakalā Ridge Line',
       link: 'https://www.komoot.com/tour/123456',
-      image: 'https://images.unsplash.com/photo-1544966503-7cc0acf9f6c2?auto=format&fit=crop&w=1200&q=60'
+      image: 'images/HalRoute.jpg'
     },
     {
       id: 'upcountry-flow',
       name: 'Upcountry Flow',
       link: 'https://www.strava.com/routes/987654',
-      image: 'https://images.unsplash.com/photo-1520975916090-3105956dac38?auto=format&fit=crop&w=1200&q=60'
+      image: 'images/MakRoute.jpg'
     },
     {
       id: 'pine-trails-enduro',
       name: 'Pine Trails Enduro',
       link: 'https://www.garmin.com/',
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=60'
-    }
+      image: 'images/PineRoute.jpg'
+      }
   ];
   
   // Time helpers
@@ -377,3 +377,16 @@ function isInViewport(element) {
 
 // Log for debugging (remove in production)
 console.log('Virtual Tours - Site initialized successfully ✓');
+
+// === BOOKING FORM ===
+function initBookingForm() {
+  const form = document.querySelector('.booking-form');
+  if (!form) return;
+
+  // Formspree handles the submission, but we can add a loading state
+  form.addEventListener('submit', function() {
+    const submitBtn = this.querySelector('.submit-btn');
+    submitBtn.textContent = 'Submitting...';
+    submitBtn.disabled = true;
+  });
+}
